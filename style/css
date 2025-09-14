@@ -1,0 +1,674 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: white;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 0;
+    text-align: center;
+    
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header a:hover {
+    color: red;
+}
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav ul li a.active {
+    color: #D22A00;
+    font-weight: bold;
+}
+
+@keyframes line-text {
+    from {
+        transform: translateX(-100%);
+        transform-origin: left center;
+    }
+    to {
+        transform: translateX(5%);
+        transform-origin: right center;
+    }
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('img\фото2.png') no-repeat center center/cover;
+    background-position: 60% center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 20px 10%;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ccc;
+    margin-bottom: 10px;
+    text-align: right;
+    animation: line-text 5s linear 1s infinite;
+}
+
+.content h1 span {
+    display: block;
+    font-size: 52px;
+    font-weight: bold;
+    color: #D22A00;
+    text-transform: uppercase;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.btn-dark {
+    background: rgba(200, 200, 200, 0.3);
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-dark:hover {
+    background: white;
+    color: black;
+}
+
+.btn-orange {
+    background: #D22A00;
+    color: white;
+    border: 2px solid #D22A00;
+}
+
+.btn-orange:hover {
+    background: white;
+    color: #D22A00;
+}
+
+.container {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.text-box {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.title-box {
+    background-color: red;
+    width: 140px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 15px;
+    margin-right: -30px;
+}
+
+.text-box p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: right;
+    margin-right: -50px;
+    padding-right: 40px;
+}
+
+.laptop {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.laptop img {
+    width: 140%;
+    max-width: 800px;
+    height: auto;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    background: #D22A00;
+    text-align: center;
+}
+
+.stat {
+    flex: 1;
+    padding: 65px;
+    font-size: 24px;
+    transition: 0.3s ease-in;
+}
+
+.stat span {
+    font-size: 36px;
+}
+
+.stat:hover {
+    background-color: rgba(142, 11, 6, 1);
+}
+
+.center {
+    background: #D22A00;
+}
+
+.content2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: #161616;
+}
+
+.text-block {
+    flex: 1;
+    padding: 20px;
+    max-width: 70%;
+    text-align: right;
+}
+
+.image-block {
+    flex: 1;
+}
+
+.image-block img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer a:hover {
+    color: red;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.contact-section {
+    background-color: #D22A00;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Глобальні стилі ===== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ======== Базові стилі для меню ======== */
+.menu-toggle {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background: #000;
+    padding: 20px;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Стилі для тексту в content2 */
+.content2 .text-block {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.content2 .text-block p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #eee;
+}
+
+/* Футер */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Адаптації ===== */
+
+/* Адаптація для 1080px */
+@media (max-width: 1080px) {
+    /* Ховаємо фото */
+    #about .laptop {
+        display: none;
+    }
+
+    /* Вирівнюємо текст */
+    #about .text-box {
+        text-align: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    #about .title-box {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    #about .text-box p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #ddd;
+        margin-bottom: 20px;
+    }
+}
+
+/* Адаптація для 768px */
+@media (max-width: 768px) {
+    .container, .content, header, main, section {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+        .header {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .content h1 {
+        animation: none;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .content h1 span {
+        font-size: 32px;
+    }
+
+    .content p {
+        font-size: 14px;
+        line-height: 1.4;
+        color: #ddd;
+        text-align: center;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+        z-index: 1001;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about .text-box,
+    #about .laptop {
+        width: 100%;
+    }
+
+    #about .laptop {
+        display: none; /* Прибране зображення */
+    }
+
+    .content2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content2 .text-block,
+    .content2 .image-block {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content2 .slider {
+        position: relative;
+        max-width: 100%;
+    }
+
+    .content2 .slider img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .content2 button.prev,
+    .content2 button.next {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .stats {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px 0;
+        background-color: #c30;
+        text-align: center;
+    }
+
+    .stat {
+        flex: 1 1 40%;
+        min-width: 120px;
+        color: white;
+        font-size: 16px;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .content2 .text-block {
+        padding: 10px 15px;
+    }
+
+    .content2 .text-block p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .footer p {
+        font-size: 15px;
+    }
+}
+
+/* Адаптація для 480px */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 18px;
+    }
+
+    .content h1 span {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 13px;
+    }
+
+    .stat {
+        flex: 1 1 45%;
+        font-size: 14px;
+    }
+
+    .content2 .text-block p {
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+    .footer {
+        padding: 25px 10px;
+    }
+
+    .footer h3 {
+        font-size: 18px;
+    }
+
+    .footer p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+/* Адаптація для 300px */
+@media (max-width: 300px) {
+    .content h1 {
+        font-size: 16px;
+    }
+
+    .content h1 span {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 12px;
+    }
+
+    .stat {
+        flex: 1 1 100%;
+        font-size: 13px;
+    }
+
+    .content2 .text-block {
+        padding: 5px 10px;
+    }
+
+    .content2 .text-block p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .footer h3 {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 13px;
+    }
+}
